@@ -22,6 +22,10 @@
     
     <nav>
        <a href="#Home" class="logo">Zha Zha</a>
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+        <ul id="navMenu">
 
         <ul>
             <li><a href="#Home">Home</a></li>
@@ -570,6 +574,15 @@
                 form.reset();
         
             }
+        });
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        
+        menuToggle.addEventListener("click", () => {
+        
+            navMenu.classList.toggle("active");
+        
         });
         
     </script>
