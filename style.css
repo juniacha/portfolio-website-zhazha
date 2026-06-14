@@ -1039,31 +1039,16 @@ body.dark-mode #pkmModal h5{
 /* TABLET */
 @media (max-width: 992px){
 
-    nav{
-        padding: 20px 30px;
-    }
-
     #Home{
         flex-direction: column-reverse;
-
         text-align: center;
 
-        padding: 100px 20px 40px;
-
-        min-height: auto;
-    }
-
-    .home-content h1,
-    .home-content h3,
-    .home-content h4,
-    .home-content p{
-        margin-left: 0;
+        padding: 100px 30px 50px;
+        gap: 25px;
     }
 
     .home-image img{
-        width: 350px;
-        margin-right: 0;
-        margin-bottom: 30px;
+        width: 280px;
     }
 
     .contact-container{
@@ -1087,25 +1072,18 @@ body.dark-mode #pkmModal h5{
         padding: 15px 20px;
     }
 
-    nav ul{
-        gap: 15px;
-        font-size: 14px;
-    }
-
-    .logo{
-        font-size: 24px;
-    }
-
     #Home{
-        min-height: unset !important;
-        height: auto !important;
-
-        padding-top: 100px;
-        padding-bottom: 40px;
-
         flex-direction: column-reverse;
 
-        gap: 15px;
+        padding: 90px 20px 40px;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .home-image img{
+        width: 220px;
     }
 
     .home-content h1{
@@ -1113,37 +1091,30 @@ body.dark-mode #pkmModal h5{
     }
 
     .home-content h3{
-        font-size: 22px;
+        font-size: 20px;
     }
 
-    .home-content h4{
-        font-size: 24px;
+    .home-content p{
+        font-size: 14px;
     }
 
-    .home-image img{
-        width: 250px;
+    .Projects-card{
+        flex-direction: column;
     }
 
-    #About,
-    #Skill,
-    #Projects,
-    #Contact{
-        padding: 80px 20px;
-    }
-
-    .education-card{
-        padding: 25px;
-    }
-
-    .organization-card{
+    .Projects-card img{
         width: 100%;
-        margin: 0;
+        height: 220px;
+    }
+
+    .contact-container{
+        flex-direction: column;
     }
 
     .gallery-poster{
         grid-template-columns: 1fr;
     }
-
+    
     .gallery-odk img{
         width: 100%;
     }
