@@ -826,6 +826,17 @@ footer span{
     position: relative;
 }
 
+.menu-toggle{
+    display: none;
+
+    font-size: 28px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
 .dropdown-menu{
     display: none !important;
     position: absolute;
@@ -941,6 +952,10 @@ body.dark-mode .Button{
 body.dark-mode .Button:hover{
     background: #C49A6C;
     color: #33181C;
+}
+
+body.dark-mode nav ul{
+    background: #4A252B;
 }
 
 .modal-content {
