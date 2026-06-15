@@ -169,13 +169,13 @@ nav ul li a:hover::after{
 }
 
 #Home{
-    min-height: 80vh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 150px 100px 100px;
+    padding: 120px 100px 80px;
 }
 
 .home-content{
@@ -829,10 +829,12 @@ footer span{
 .menu-toggle{
     display: none;
 
-    font-size: 28px;
-
     background: none;
     border: none;
+
+    font-size: 30px;
+
+    color: #C49A6C;
 
     cursor: pointer;
 }
@@ -1081,181 +1083,258 @@ body.dark-mode #pkmModal h5{
 }
 
 /* MOBILE */
-/* MOBILE */
-@media (max-width: 768px){
+@media (max-width:768px){
 
+    /* NAVBAR */
 
     nav{
         padding: 15px 20px;
-        position: fixed;
+        height: 70px;
     }
-    
+
     .logo{
         font-size: 22px;
     }
-    
+
     .menu-toggle{
         display: block;
-    
+
         background: none;
         border: none;
-    
-        font-size: 24px;
-    
-        cursor: pointer;
-    
+
+        font-size: 30px;
+
         color: #C49A6C;
+
+        cursor: pointer;
+
+        margin-left: auto;
+        margin-right: 12px;
     }
-    
+
+    .theme-toggle{
+        width: 65px;
+        height: 34px;
+    }
+
+    .toggle-circle{
+        width: 26px;
+        height: 26px;
+    }
+
+    body.dark-mode .toggle-circle{
+        left: 35px;
+    }
+
+    /* MENU */
+
     #navMenu{
-        display: none;
-    
-        position: absolute;
-    
+        display: flex;
+
+        position: fixed;
+
         top: 70px;
-        left: 0;
-    
+        left: -100%;
+
         width: 100%;
-    
-        background: #F4F1EB;
-    
+
         flex-direction: column;
-    
-        gap: 15px;
-    
-        padding: 20px 0;
-    
+
+        gap: 20px;
+
+        padding: 30px 0;
+
         text-align: center;
-    
+
+        background: #F4F1EB;
+
+        transition: 0.3s;
+
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    
+
     #navMenu.active{
-        display: flex;
+        left: 0;
     }
-    
+
     body.dark-mode #navMenu{
         background: #4A252B;
     }
-    
+
+    nav ul{
+        margin: 0;
+    }
+
+    /* DROPDOWN */
+
     .dropdown-menu{
         position: static;
-    
+
         display: none !important;
-    
+
         background: transparent;
-    
+
         box-shadow: none;
     }
-    
+
     .dropdown:hover .dropdown-menu{
         display: flex !important;
+
         flex-direction: column;
     }
-    
+
+    /* SECTION */
+
+    #Home,
+    #About,
+    #Contact{
+        min-height: 100vh;
+    }
+
+    /* HOME */
+
     #Home{
         flex-direction: column-reverse;
-    
-        min-height: auto;
-    
-        padding: 100px 20px 40px;
-    
-        gap: 20px;
-    
+
+        justify-content: center;
+
         text-align: center;
+
+        padding: 90px 20px 40px;
+
+        gap: 25px;
     }
-    
+
     .home-content{
         max-width: 100%;
     }
-    
+
     .home-content h1,
     .home-content h3,
     .home-content h4,
     .home-content p{
         margin-left: 0;
     }
-    
+
     .home-content h1{
-        font-size: 38px;
+        font-size: 42px;
+        line-height: 1.2;
     }
-    
+
     .home-content h3{
-        font-size: 20px;
+        font-size: 22px;
     }
-    
+
     .home-content h4{
         font-size: 24px;
     }
-    
+
     .home-content p{
-        font-size: 14px;
+        font-size: 15px;
     }
-    
+
     .home-image img{
         width: 220px;
-    
-        margin-right: 0;
+
+        margin: 0 auto;
+
+        display: block;
     }
-    
-    #About,
-    #Skill,
-    #Projects,
-    #Contact{
-        padding: 70px 20px;
+
+    /* ABOUT */
+
+    #About{
+        padding: 90px 20px;
     }
-    
+
     .about-text{
         text-align: left;
         font-size: 15px;
     }
-    
+
+    /* RESUME */
+
+    #Resume{
+        padding: 90px 20px;
+    }
+
     .education-card{
         padding: 25px;
     }
-    
+
     .education-card h3{
-        font-size: 26px;
+        font-size: 24px;
     }
-    
+
     .education-card h4{
         font-size: 18px;
     }
-    
+
     .organization-card{
         width: 100%;
         margin: 0;
     }
-    
+
+    /* SKILL */
+
+    #Skill{
+        padding: 90px 20px;
+    }
+
+    .skill-card{
+        width: 100%;
+    }
+
+    /* PROJECT */
+
+    #Projects{
+        padding: 90px 20px;
+    }
+
     .Projects-card{
         flex-direction: column;
     }
-    
+
     .Projects-card img{
         width: 100%;
         height: 220px;
     }
-    
+
     .Projects-content{
         padding: 20px;
     }
-    
+
+    /* CONTACT */
+
+    #Contact{
+        padding: 90px 20px;
+    }
+
     .contact-container{
         flex-direction: column;
     }
-    
+
+    .contact-info,
+    .contact-form{
+        padding: 25px;
+    }
+
+    /* GALLERY */
+
     .gallery-poster{
         grid-template-columns: 1fr;
     }
-    
+
     .gallery-odk img{
         width: 100%;
     }
-    
+
+    /* FOOTER */
+
     .footer-links{
         flex-direction: column;
         gap: 10px;
     }
 
-
+}
 }
