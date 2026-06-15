@@ -1081,51 +1081,169 @@ body.dark-mode #pkmModal h5{
 }
 
 /* MOBILE */
+/* MOBILE */
 @media (max-width: 768px){
+
 
     nav{
         padding: 15px 20px;
+        position: fixed;
     }
-
+    
+    .logo{
+        font-size: 22px;
+    }
+    
+    .menu-toggle{
+        display: block;
+    
+        background: none;
+        border: none;
+    
+        font-size: 24px;
+    
+        cursor: pointer;
+    
+        color: #C49A6C;
+    }
+    
+    #navMenu{
+        display: none;
+    
+        position: absolute;
+    
+        top: 70px;
+        left: 0;
+    
+        width: 100%;
+    
+        background: #F4F1EB;
+    
+        flex-direction: column;
+    
+        gap: 15px;
+    
+        padding: 20px 0;
+    
+        text-align: center;
+    
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    #navMenu.active{
+        display: flex;
+    }
+    
+    body.dark-mode #navMenu{
+        background: #4A252B;
+    }
+    
+    .dropdown-menu{
+        position: static;
+    
+        display: none !important;
+    
+        background: transparent;
+    
+        box-shadow: none;
+    }
+    
+    .dropdown:hover .dropdown-menu{
+        display: flex !important;
+        flex-direction: column;
+    }
+    
     #Home{
         flex-direction: column-reverse;
-
-        padding: 90px 20px 40px;
-
+    
+        min-height: auto;
+    
+        padding: 100px 20px 40px;
+    
         gap: 20px;
-
+    
         text-align: center;
     }
-
-    .home-image img{
-        width: 220px;
+    
+    .home-content{
+        max-width: 100%;
     }
-
+    
+    .home-content h1,
+    .home-content h3,
+    .home-content h4,
+    .home-content p{
+        margin-left: 0;
+    }
+    
     .home-content h1{
-        font-size: 42px;
+        font-size: 38px;
     }
-
+    
     .home-content h3{
         font-size: 20px;
     }
-
+    
+    .home-content h4{
+        font-size: 24px;
+    }
+    
     .home-content p{
         font-size: 14px;
     }
-
+    
+    .home-image img{
+        width: 220px;
+    
+        margin-right: 0;
+    }
+    
+    #About,
+    #Skill,
+    #Projects,
+    #Contact{
+        padding: 70px 20px;
+    }
+    
+    .about-text{
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .education-card{
+        padding: 25px;
+    }
+    
+    .education-card h3{
+        font-size: 26px;
+    }
+    
+    .education-card h4{
+        font-size: 18px;
+    }
+    
+    .organization-card{
+        width: 100%;
+        margin: 0;
+    }
+    
     .Projects-card{
         flex-direction: column;
     }
-
+    
     .Projects-card img{
         width: 100%;
         height: 220px;
     }
-
+    
+    .Projects-content{
+        padding: 20px;
+    }
+    
     .contact-container{
         flex-direction: column;
     }
-
+    
     .gallery-poster{
         grid-template-columns: 1fr;
     }
@@ -1133,9 +1251,11 @@ body.dark-mode #pkmModal h5{
     .gallery-odk img{
         width: 100%;
     }
-
+    
     .footer-links{
         flex-direction: column;
         gap: 10px;
     }
+
+
 }
