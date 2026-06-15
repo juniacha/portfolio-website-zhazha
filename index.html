@@ -21,46 +21,50 @@
 <body>
     
     <nav>
-
+        
         <a href="#Home" class="logo">Zha Zha</a>
-    
+        
         <button class="menu-toggle" id="menuToggle">
-            ☰
+            <i class="bi bi-list"></i>
         </button>
-    
+        
         <ul id="navMenu">
-    
+        
             <li><a href="#Home">Home</a></li>
-    
+        
             <li><a href="#About">About</a></li>
-    
+        
             <li class="dropdown">
-    
+        
                 <a href="#Resume">Resume ▾</a>
-    
+        
                 <ul class="dropdown-menu">
-    
+        
                     <li><a href="#Pendidikan">Pendidikan</a></li>
-    
+        
                     <li><a href="#Organisasi">Organisasi</a></li>
-    
+        
                     <li><a href="#Skill">Keahlian</a></li>
-    
+        
                 </ul>
-    
+        
             </li>
-    
+        
             <li><a href="#Projects">Projects</a></li>
-    
+        
             <li><a href="#Contact">Contact</a></li>
-    
+        
         </ul>
-    
+        
         <button class="theme-toggle" id="themeToggle">
             <div class="toggle-circle">
                 <i class="bi bi-moon-stars-fill"></i>
             </div>
         </button>
+
+
+</nav>
+
     
     </nav>
         
@@ -594,6 +598,17 @@
             navMenu.classList.toggle("active");
         
         });
+
+        document.querySelectorAll("#navMenu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+        
+            navMenu.classList.remove("active");
+        
+        });
+
+});
+
         
     </script>
 
